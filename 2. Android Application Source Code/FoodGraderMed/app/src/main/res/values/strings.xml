@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Food Grader</string>
+    <string name="infoPrompt">Scan the Barcode or enter the number manually below</string>
+    <string name="product_image">Product Image</string>
+    <string name="walkers_cheese_and_onion_crisps">Walkers Cheese and Onion Crisps</string>
+    <string name="back">BACK</string>
+</resources>

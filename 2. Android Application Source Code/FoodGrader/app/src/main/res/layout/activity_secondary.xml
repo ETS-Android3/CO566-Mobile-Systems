@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondaryActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/imageView_product"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="1:1"
+                    android:contentDescription="@string/product_image" />
+
+                <TextView
+                    android:id="@+id/textView_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="100dp"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="@string/walkers_cheese_and_onion_crisps"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="103dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardView_carbs"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle2">
+                <!-- app:cardBackgroundColor="@android:color/holo_orange_dark" -->
+
+
+                <TextView
+                    android:id="@+id/textView_kcal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="2000kcal"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_kj"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="3000kJ"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="76dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="82dp"
+                    android:text="calories"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textSize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="per 100g"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_fat"
+                android:layout_width="0dp"
+                android:layout_height="103dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardView_protein"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView_carbs"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle2">
+                <!-- app:cardBackgroundColor="@android:color/holo_orange_dark" -->
+
+
+                <TextView
+                    android:id="@+id/textView_fatGrams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="40g"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_fatPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="Saturated: 30g"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="76dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="82dp"
+                    android:text="fat"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textSize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_carbs"
+                android:layout_width="0dp"
+                android:layout_height="103dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardView_fat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle2">
+                <!-- app:cardBackgroundColor="@android:color/holo_orange_dark" -->
+
+
+                <TextView
+                    android:id="@+id/textView_carbsGrams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="40g"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_carbsPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="Sugars: 30g"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="76dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="82dp"
+                    android:text="carbs"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textSize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_protein"
+                android:layout_width="0dp"
+                android:layout_height="103dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView_fat"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle2">
+                <!-- app:cardBackgroundColor="@android:color/holo_orange_dark" -->
+
+
+                <TextView
+                    android:id="@+id/textView_proteinGrams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="40g"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_proteinPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="22%"
+                    android:textAlignment="center"
+                    android:textSize="10sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="76dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="82dp"
+                    android:text="protein"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textSize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Ingredients"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView_notes" />
+
+            <TextView
+                android:id="@+id/textView_ingredients"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:text=" Water (Aqua), Glycerin, Ricinus Communis (Castor) Seed Oil, Isononyl Isononanoate, Petrolatum, Paraffin, Flavor (Aroma), Sorbitol, Arachidyl Alcohol, Cetearyl Alcohol, Cetearyl Glucoside, Polyacrylate-13, Resveratrol, Dimethicone, Vitis Vinifera (Grape) Seed Extract, Grandis (Grapefruit) Seed Extract, Soy Isoflavones, Leuconostoc/Radish Root Ferment Filtrate, Palmitoyl Tripeptide-38, Phyllanthus Emblica Fruit Extract, Arachidyl Glucoside, Behenyl Alcohol, Butylene Glycol, Cetearyl Ethylhexanoate, Disodium EDTA, Polyisobutene, Polysorbate 20, Polysorbate 60, Portulaca Pilosa Extract, Potassium Sorbate, Sorbitan Isostearate, Stevia Rebaudiana Extract, Sucrose Cocoate, Tocopheryl Acetate (Vitamin E) Company"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_allergens"
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView_notes"
+                app:layout_constraintTop_toBottomOf="@+id/cardView_fat">
+                <!-- app:cardBackgroundColor="@android:color/holo_orange_dark" -->
+
+
+                <TextView
+                    android:id="@+id/textView_allergens"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="26dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="25dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="allergens"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textSize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_notes"
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardView_allergens"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView_carbs">
+                <!-- app:cardBackgroundColor="@android:color/holo_orange_dark" -->
+
+
+                <TextView
+                    android:id="@+id/textView_foodGrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="A"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="25dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="food grade"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textSize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="95dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_ingredients" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/back"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
